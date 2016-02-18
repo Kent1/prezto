@@ -23,8 +23,3 @@ alias egrep='egrep --color=auto'
 # Android
 export PATH=${PATH}:/home/kent/android-studio/sdk/tools
 export PATH=${PATH}:/home/kent/android-studio/sdk/platform-tools
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
-# Ruby and RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
