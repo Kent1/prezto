@@ -50,3 +50,6 @@ alias agar='sudo apt-get autoremove'
 # Android
 export PATH=${PATH}:/home/kent/android-studio/sdk/tools
 export PATH=${PATH}:/home/kent/android-studio/sdk/platform-tools
+
+# Miscellanous
+alias meteo='curl wttr.in/'
