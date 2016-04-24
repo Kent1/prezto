@@ -53,3 +53,11 @@ export PATH=${PATH}:/home/kent/android-studio/sdk/platform-tools
 
 # Miscellanous
 alias meteo='curl wttr.in/'
+
+alias c='clear'
+
+function mcd() {
+  mkdir -p "$1" && cd "$1";
+}
+
+function ssh_tmux() { ssh -t "$1" tmux a || ssh -t "$1" tmux; }
