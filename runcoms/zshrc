@@ -51,8 +51,8 @@ alias agar='sudo apt-get autoremove'
 alias docker-clean='docker ps -a | awk '{print $1}' | grep -v CONTAINER | xargs --no-run-if-empty docker rm'
 
 # Glances
-#alias glances='docker run -v /var/run/docker.sock:/var/run/docker.sock:ro --pid host --name Glances -it docker.io/nicolargo/glances'
-alias glances='docker start -ia Glances'
+alias glances='docker run --rm -v /var/run/docker.sock:/var/run/docker.sock:ro --pid host --name Glances -it docker.io/nicolargo/glances'
+#alias glances='docker start -ia Glances'
 
 # Android
 export PATH=${PATH}:/home/kent/android-studio/sdk/tools
