@@ -48,7 +48,9 @@ alias aguu='sudo apt-get update && sudo apt-get upgrade'
 alias agar='sudo apt-get autoremove'
 
 # Docker
-alias docker-clean='docker ps -a | awk '{print $1}' | grep -v CONTAINER | xargs --no-run-if-empty docker rm'
+alias docker-rm-all-containers='docker ps -a | awk "{print \$1}" | grep -v CONTAINER | xargs --no-run-if-empty docker rm'
+alias docker-update-images='docker images | grep -v REPO | awk "{print \$1 \":\" \$2}" | xargs --no-run-if-empty -L1 docker pull'
+alias docker-clean-images='docker images | grep -v REPO | grep none | awk "{print \$3}" | xargs --no-run-if-empty -L1 docker rmi'
 
 # Glances
 alias glances='docker run --rm -v /var/run/docker.sock:/var/run/docker.sock:ro --pid host --name Glances -it docker.io/nicolargo/glances'
