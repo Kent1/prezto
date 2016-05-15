@@ -74,4 +74,6 @@ fi
 TMPPREFIX="${TMPDIR%/}/zsh"
 
 # Anacron
-/usr/sbin/anacron -s -t ${HOME}/.anacron/etc/anacrontab -S ${HOME}/.anacron/spool
+if [[ -d ${HOME}/spool ]]; then
+  /usr/sbin/anacron -s -t ${HOME}/.anacron/etc/anacrontab -S ${HOME}/.anacron/spool
+fi
