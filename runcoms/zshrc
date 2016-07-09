@@ -49,10 +49,12 @@ alias agar='sudo apt-get autoremove'
 
 # Docker
 alias docker-rm-all-containers='docker rm $(docker ps -a -q)'
+alias docker-stop-all-containers='docker stop $(docker ps -q)'
+alias docker-kill-all-containers='docker kill $(docker ps -q)'
 alias docker-rm-all-images='docker rmi $(docker images -q)'
 alias docker-rm-all-volumes='docker volume rm $(docker volume ls -qf dangling=true)'
 alias docker-update-images='docker images | grep -v REPO | awk "{print \$1 \":\" \$2}" | xargs --no-run-if-empty -L1 docker pull'
-alias docker-clean-images='docker images | grep -v REPO | grep none | awk "{print \$3}" | xargs --no-run-if-empty -L1 docker rmi'
+alias docker-clean-images='docker rmi $(docker images -q -f dangling=true'
 alias dc='docker-compose'
 
 # Glances
