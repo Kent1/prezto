@@ -77,3 +77,6 @@ TMPPREFIX="${TMPDIR%/}/zsh"
 if [[ -d ${HOME}/spool ]]; then
   /usr/sbin/anacron -s -t ${HOME}/.anacron/etc/anacrontab -S ${HOME}/.anacron/spool
 fi
+
+# NPM
+export PATH=~/.npm-global/bin:$PATH
