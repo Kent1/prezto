@@ -65,6 +65,9 @@ alias glances='docker run --rm -v /var/run/docker.sock:/var/run/docker.sock:ro -
 export PATH=${PATH}:/home/kent/android-studio/sdk/tools
 export PATH=${PATH}:/home/kent/android-studio/sdk/platform-tools
 
+# Go
+export GOPATH=~/Development/Go
+
 # Miscellanous
 alias meteo='curl wttr.in/'
 
