@@ -80,3 +80,5 @@ fi
 
 # NPM
 export PATH=~/.npm-global/bin:$PATH
+
+if which jenv > /dev/null; then eval "$(jenv init -)"; fi
