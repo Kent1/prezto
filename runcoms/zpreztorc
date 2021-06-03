@@ -44,8 +44,7 @@ zstyle ':prezto:load' pmodule \
   'python' \
   'syntax-highlighting' \
   'tmux' \
-  'autosuggestions'
-  'history-substring-search' \
+  'autosuggestions' \
   'prompt'
 
 #
